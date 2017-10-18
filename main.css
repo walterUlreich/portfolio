@@ -179,6 +179,7 @@ body {
 .gallery_image {
   border: 1px solid #444;
   transition: opacity 0.5s;
+  margin-left: 40px;
 }
 
 .gallery_image:hover {
@@ -191,7 +192,7 @@ body {
 
 .description {
   position: relative;
-  left: 80px;
+  left: 100px;
 }
 
   /****** Contact Section ******/
@@ -251,7 +252,12 @@ body {
 
   /****** Media Queries ******/
 
-@media screen and (max-width: 480px) {
+
+
+@media screen and (max-width: 360px) {
+  .container-fluid {
+    overflow-x: hidden;
+  }
   .header {
     height: 80px;
     position: absolute;
@@ -271,7 +277,7 @@ body {
     font-size: 140%;
   }
   .about {
-    height: 1000px;
+    height: 1140px;
     padding: 20px;
   }
   .about p {
@@ -279,31 +285,43 @@ body {
     width: 120%;
     text-align: center;
     position: relative;
-    right: 30px;
+    right: 20px;
   }
   .about img {
     margin-top: 20px;
+    height: 200px;
+    width: 210px;
   }
   .about-icons {
-    font-size: 260%;
+    font-size: 200%;
+  }
+  .about-icons i {
+    margin-right: 20px;
+    position: relative;
+    left: -20px;
   }
   .about-first-row {
     margin-top: -20px;
   }
   .hr {
-    width: 400px;
+    width: 300px;
   }
   #portfolio {
     height: 1500px;
   }
   .gallery_image {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 40px;
+    height: auto;
+    margin-left: 0;
+  }
+  .portfolio-first-row {
+    margin-top: -40px;
   }
   .portfolio h3 {
     margin-top: 40px;
     position: relative;
-    left: 80px;
+    left: 20px;
   }
   .portfolio p {
     font-size: 120%;
@@ -311,6 +329,9 @@ body {
     left: -80px;
     width: 100%;
     text-align: center;
+  }
+  .description {
+    left: 80px;
   }
   .contact {
     height: 580px;
@@ -367,5 +388,4 @@ body {
   .nav a:active {
     color: black;
   }
-
 }
