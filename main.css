@@ -4,6 +4,7 @@ body {
   position: relative;
   overflow-x: hidden;
 }
+  /******* Header/Navigation ******/
 
 .header {
   height: 100px;
@@ -20,6 +21,10 @@ body {
   left: 80px;
   color: #f9b168;
   font-family: 'Permanent Marker', cursive;
+}
+
+#menu-icon {
+  display: none;
 }
 
 .nav {
@@ -48,6 +53,8 @@ body {
 .header a:hover {
   text-decoration: none;
 }
+
+  /****** Jumbotron ******/
 
 .main {
   height: 600px;
@@ -88,7 +95,9 @@ body {
   letter-spacing: 0.2em;
 }
 
-.first-row {
+  /****** About Section ******/
+
+.about-first-row {
   margin: 40px;
 }
 
@@ -130,6 +139,8 @@ body {
   margin-bottom: 80px;
   width: 600px;
 }
+
+  /****** Portfolio Section ******/
 
 #portfolio {
   background-color: #e8e9ea;
@@ -174,7 +185,7 @@ body {
   opacity: 0.6;
 }
 
-.first-row {
+.portfolio-first-row {
   margin-top: 60px;
 }
 
@@ -182,6 +193,8 @@ body {
   position: relative;
   left: 80px;
 }
+
+  /****** Contact Section ******/
 
 .contact {
   height: 400px;
@@ -202,6 +215,8 @@ body {
   font-size: 275%;
   margin-bottom: 20px;
 }
+
+  /****** Footer ******/
 
 .footer {
   background-color: #54595e;
@@ -232,4 +247,125 @@ body {
 
 .icons a:hover {
   color: #68f2f2;
+}
+
+  /****** Media Queries ******/
+
+@media screen and (max-width: 480px) {
+  .header {
+    height: 80px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  #title {
+    font-size: 150%;
+    position: relative;
+    left: 10px;
+    top: 24px;
+  }
+  .nav {
+    display: none;
+  }
+  .main h3 {
+    font-size: 140%;
+  }
+  .about {
+    height: 1000px;
+    padding: 20px;
+  }
+  .about p {
+    font-size: 140%;
+    width: 120%;
+    text-align: center;
+    position: relative;
+    right: 30px;
+  }
+  .about img {
+    margin-top: 20px;
+  }
+  .about-icons {
+    font-size: 260%;
+  }
+  .about-first-row {
+    margin-top: -20px;
+  }
+  .hr {
+    width: 400px;
+  }
+  #portfolio {
+    height: 1500px;
+  }
+  .gallery_image {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .portfolio h3 {
+    margin-top: 40px;
+    position: relative;
+    left: 80px;
+  }
+  .portfolio p {
+    font-size: 120%;
+    position: relative;
+    left: -80px;
+    width: 100%;
+    text-align: center;
+  }
+  .contact {
+    height: 580px;
+  }
+  .contact span {
+    margin-top: 20px;
+  }
+  #first-icon {
+    margin-top: -40px;
+  }
+  .footer {
+    font-size: 110%;
+    height: 280px;
+  }
+  .icons {
+    position: relative;
+    left: 0;
+    top: 100px;
+  }
+  #menu-icon {
+    display: inline-block;
+    font-size: 300%;
+    color: #eee;
+    position: absolute;
+    right: 20px;
+    top: 6px;
+    cursor: pointer;
+  }
+  .open {
+    display: block;
+  }
+  .nav {
+    position: absolute;
+    right: 0;
+    top: 80px;
+  }
+  .nav li {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    width: 100%;
+  }
+  .nav li:active {
+    color: black;
+    background-color: white;
+  }
+  .nav a {
+    width: 100%;
+    display: block;
+  }
+  .nav a:hover {
+    color: white;
+  }
+  .nav a:active {
+    color: black;
+  }
+
 }

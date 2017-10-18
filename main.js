@@ -23,4 +23,8 @@ $('#about-link').click(function(event) {
   scrollBy(0, -offset3)
   });
 
+  $(".burger-nav").on("click", function() {
+    $(".nav").toggleClass("open")
+  })
+
 })
