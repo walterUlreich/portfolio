@@ -31,7 +31,7 @@ $('#about-link').click(function(event) {
   $( ".burger-nav" ).bind( "tap", tapHandler );
 
   function tapHandler( event ){
-    $( event.target ).toggleClass( "open" );
+    $( '.nav' ).toggleClass( "open" );
   }
 });
 
