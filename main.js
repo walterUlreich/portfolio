@@ -31,7 +31,7 @@ $('#about-link').click(function(event) {
 
    $(window).scroll(function(){
      scrollTop = $(window).scrollTop()
-      console.log(scrollTop)
+      //console.log(scrollTop)
 
      if (scrollTop >= 60) {
        $('.header').addClass('scrolled')
