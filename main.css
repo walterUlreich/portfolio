@@ -13,6 +13,7 @@ body {
   text-transform: uppercase;
   font-family: 'Saira', sans-serif;
   z-index: 100;
+  transition: all 0.5s ease;
 }
 
 #title {
@@ -21,6 +22,7 @@ body {
   left: 80px;
   color: #f9b168;
   font-family: 'Permanent Marker', cursive;
+  transition: all 0.5s ease;
 }
 
 #menu-icon {
@@ -31,12 +33,14 @@ body {
   position: relative;
   right: 80px;
   bottom: 4px;
+  transition: all 0.5s ease;
 }
 
 .nav li {
   margin-right: 20px;
   color: #fff;
   font-size: 120%;
+  transition: all 0.5s ease;
 }
 
 .nav a {
@@ -252,6 +256,23 @@ body {
 
 .icons a:hover {
   color: #68f2f2;
+}
+
+.scrolled {
+  height: 60px !important;
+}
+
+.scrolled #title {
+  font-size: 120%;
+  top: 20px;
+}
+
+.scrolled .nav {
+    top: -10px;
+}
+
+.scrolled .nav li {
+  font-size: 100%;
 }
 
   /****** Media Queries ******/
