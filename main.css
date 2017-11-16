@@ -8,7 +8,8 @@ body {
 
 .header {
   height: 100px;
-  background-color: #54595e;
+  background-color: #000;
+  opacity: 0.8;
   position: fixed;
   text-transform: uppercase;
   font-family: 'Saira', sans-serif;
@@ -20,7 +21,7 @@ body {
   position: relative;
   top: 30px;
   left: 80px;
-  color: #f9b168;
+  color: #96092e;
   font-family: 'Permanent Marker', cursive;
   transition: all 0.5s ease;
 }
@@ -37,21 +38,22 @@ body {
 }
 
 .nav li {
-  margin-right: 20px;
+  margin-right: 0px;
   color: #fff;
   font-size: 120%;
-  transition: all 0.5s ease;
 }
 
 .nav a {
   color: #fff;
-  -webkit-transition: color .7s; /* Safari */
-    transition: color .7s;
+  padding: 38px 10px 32px 10px;
+  -webkit-transition: all .7s; /* Safari */
+    transition: all .7s;
 }
 
 .nav a:hover {
   text-decoration: none;
-  color: #68f2f2;
+  color: #000;
+  background-color: #fff;
 }
 
 .header a:hover {
@@ -63,7 +65,7 @@ body {
 .main {
   height: 600px;
   border: 1px solid black;
-  background: linear-gradient(rgba(95,158,160,0.7),rgba(72,61,139,0.7)), url('mountains.jpg');
+  background-image: url('city.jpeg');
   background-size: cover;
   background-position: center center;
   color: #fff;
@@ -90,8 +92,8 @@ body {
 .icon {
   font-size: 600%;
   position: relative;
-  top: 200px;
-  color: #f9b168;
+  top: 180px;
+  color: #96092e;
 }
 
 .wu {
@@ -148,11 +150,12 @@ body {
 
 #portfolio {
   background-color: #e8e9ea;
-  height: 840px;;
+  height: auto;
 }
 
 .portfolio {
   padding-top: 40px;
+  padding-bottom: 60px;
 }
 
 .portfolio p {
@@ -184,10 +187,12 @@ body {
   border: 1px solid #444;
   transition: opacity 0.5s;
   margin-left: 40px;
+  transition: all 0.5s;
 }
 
 .gallery_image:hover {
-  opacity: 0.6;
+  box-shadow: 4px 4px 20px #555;
+  border-radius: 4px;
 }
 
 .portfolio-first-row {
@@ -228,9 +233,9 @@ body {
   /****** Footer ******/
 
 .footer {
-  background-color: #54595e;
+  background-color: #383b3d;
   height: 200px;
-  color: #f9b168;
+  color: #fff;
   font-size: 120%;
 }
 
@@ -244,18 +249,17 @@ body {
   font-size: 300%;
   position: relative;
   left: 440px;
-  color: white;
 }
 
 .icons a {
   margin-right: 20px;
-  color: #fff;
+  color: #96092e;
   -webkit-transition: color .7s; /* Safari */
     transition: color .7s;
 }
 
 .icons a:hover {
-  color: #68f2f2;
+  color: #fff;
 }
 
 .scrolled {
@@ -273,6 +277,10 @@ body {
 
 .scrolled .nav li {
   font-size: 100%;
+}
+
+.scrolled .nav a {
+  padding-bottom: 17px;
 }
 
   /****** Media Queries ******/

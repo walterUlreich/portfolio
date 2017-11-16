@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  height: 60px;
+  background-color: #000;
+  color: #fff;
+  line-height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0 auto;
+}
+
+.nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav ul li a {
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.nav ul li a:hover {
+  text-decoration: none;
+  color: #3117c4;
+}
+
+h1 {
+  font-family: 'Kalam', cursive;
+  color: #3117c4;
+  margin: 140px 0 80px 0;
+}
+
+.title-p {
+  width: 80%;
+  color: #666;
+}
+
+.menu {
+  padding: 0 120px 80px 120px;
+}
+
+.menu h3 {
+  font-size: 150%;
+}
+
+.menu-item {
+  margin: 20px 0;
+}
+
+.menu-item p {
+  width: 80%;
+  color: #666;
+}
+
+.menu-title {
+  color: #3117c4;
+}
+
+.menu-hr {
+  margin-bottom: 40px;
+}
+
+.price {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 120%;
+  font-style: italic;
+}
+
+#hr {
+  width: 100px;
+  margin-top: -60px;
+  margin-bottom: 80px;
+}
+
+.footer {
+  height: 100px;
+  background-color: #333;
+  color: #eee;
+  padding-top: 40px;
+}

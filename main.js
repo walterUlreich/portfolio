@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-  var offset = 70
+  var offset = 60
 
 $('#about-link').click(function(event) {
   event.preventDefault()
@@ -7,7 +7,7 @@ $('#about-link').click(function(event) {
   scrollBy(0, -offset)
 });
 
-  var offset2 = 90
+  var offset2 = 60
 
   $('#portfolio-link').click(function(event) {
   event.preventDefault()
@@ -15,7 +15,7 @@ $('#about-link').click(function(event) {
   scrollBy(0, -offset2)
   });
 
-  var offset3 = 30
+  var offset3 = 0
 
   $('#contact-link').click(function(event) {
   event.preventDefault()
