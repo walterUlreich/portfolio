@@ -65,7 +65,7 @@ body {
 .main {
   height: 600px;
   border: 1px solid black;
-  background-image: url('city.jpeg');
+  background-image: url('images/city.jpeg');
   background-size: cover;
   background-position: center center;
   color: #fff;

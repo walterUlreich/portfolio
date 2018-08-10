@@ -77,8 +77,8 @@ body {
 
 .row {
   margin: 40px auto;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #ddd;
+  /* border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd; */
   padding: 40px 0;
   width: 90%;
 }
