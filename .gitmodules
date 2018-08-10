@@ -1,0 +1,3 @@
+[submodule "book-club"]
+	path = book-club
+	url = https://github.com/walterUlreich/book-club.git
