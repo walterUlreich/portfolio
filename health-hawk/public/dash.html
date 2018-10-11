@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="dash.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+
+    <div id="app">
+
+        <div class="navbar">
+            <a href="#"><h3 id="logoText">healthHAWK</h3></a>
+            <div class="icon">
+              <span class="fa fa-heartbeat" aria-hidden="true"></span>
+            </div>
+            <p id="welcome">Hello, {{user.username}}</p>
+            <ul>
+              <a href="#" class="link"><li><i class="fa fa-user-circle" aria-hidden="true"></i>Profile</li></a>
+              <a href="index.html" class="link"><li>Logout</li></a>
+            </ul>
+        </div>
+
+        <div class="jumbotron text-center">
+          <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="container text-center main-content">
+
+          <h3 class="title" id="first-title">Eating Habits Overview</h3>
+          <hr class="hr">
+
+
+        <div class="container">
+          <div id="canvasContainer" class="row">
+              <div class="col-md-6 canvas">
+                <canvas id="theCanvas"></canvas>
+              </div>
+              <div class="col-md-6 canvas">
+                <canvas id="theCanvas2"></canvas>
+              </div>
+          </div>
+        </div>
+
+
+
+        <h3 class="title">Add Meals</h3>
+        <hr class="hr">
+
+        <form v-on:submit="createMeal" class="form" id="mealSubmit">
+            <select v-model="foodObj" options="myOptions" class="formItems">
+                <option v-for="option in myOptions" v-bind:value="option">
+                {{ option.text }}
+                </option>
+
+            </select>
+            <select v-model="mealName" class="formItems">
+                <option>Breakfast</option>
+                <option>Lunch</option>
+                <option>Dinner</option>
+                <option>Snack</option>
+            </select>
+            <input class="roundEdge formItems" v-model="mealDate" type="date" placeholder="Date">
+            <input class="btn  btn-dark formItems" id="submit" type="submit" value="Submit Your Meal!">
+        </form>
+
+
+
+        <h3 class="title">Overall Meal List</h3>
+        <hr class="hr">
+
+        <table class="table table-striped" id="table">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>Food</th>
+                    <th>Meal</th>
+                    <th>Calories</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="x in allMeals">
+                    <td>{{x.foodname}} </td>
+                    <td>{{x.mealname}}</td>
+                    <td>{{x.calories}}</td>
+                    <td>{{x.mealdate.toLocaleDateString()}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+            <a href="/future.html"><button class="btn btn-primary future">Future Features</button></a>
+
+        </div>
+
+    <div class="footer container-fluid">
+      <h3 id="footer-logo" class="text-center">healthHAWK</h3>
+      <div class="footer-logo-icon">
+        <span class="fa fa-heartbeat" aria-hidden="true"></span>
+      </div>
+      <p class="text-center">&copy; Copyright 2017 | Design by Walter Ulreich</p>
+      <div class="footer-icons">
+        <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+
+    <script src="main.js"></script>
+
+  </body>
+</html>
