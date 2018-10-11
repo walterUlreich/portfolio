@@ -1,31 +1,6 @@
-$( document ).ready(function() {
-  var offset = 60
+$(document).ready(function() {
 
-$('#about-link').click(function(event) {
-  event.preventDefault()
-  $($(this).attr('href'))[0].scrollIntoView()
-  scrollBy(0, -offset)
-});
-
-  var offset2 = 60
-
-  $('#portfolio-link').click(function(event) {
-  event.preventDefault()
-  $($(this).attr('href'))[0].scrollIntoView()
-  scrollBy(0, -offset2)
-  });
-
-  var offset3 = 0
-
-  $('#contact-link').click(function(event) {
-  event.preventDefault()
-  $($(this).attr('href'))[0].scrollIntoView()
-  scrollBy(0, -offset3)
-  });
-
-  $(".burger-nav").on("click", function() {
-    $(".nav").toggleClass("open")
-  })
+  console.log("Ready!")
 
   var scrollTop = 0;
 
@@ -34,12 +9,10 @@ $('#about-link').click(function(event) {
       //console.log(scrollTop)
 
      if (scrollTop >= 60) {
-       $('.header').addClass('scrolled')
+       $("#arrow").show()
      } else if (scrollTop < 60) {
-       $('.header').removeClass('scrolled')
+       $("#arrow").hide()
      }
 
    })
-
-
 })

@@ -1,135 +1,113 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-        <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-        <script src="https://unpkg.com/vue"></script>
-        <title>Walter Ulreich</title>
-        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Saira:300" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    </head>
-    <body data-spy="scroll" data-target=".nav" data-offset="50" id="top">
+  <head>
+    <title>Walter Ulreich</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+  </head>
+  <body>
 
-      <div class="header container-fluid">
-        <a href="#top"><h2 id="title">Walter Ulreich</h2></a>
-        <div id="nav">
-        <ul class="nav pull-right">
-          <li><a href="#about" id="about-link">About</a></li>
-          <li><a href="#portfolio" id="portfolio-link">Portfolio</a></li>
-          <li><a href="#contact" id="contact-link">Contact</a></li>
-        </ul>
+    <header id="top">
+      <div class="overlay">
+        <a href="#top" id="logo"></a>
+        <nav>
+          <ul>
+            <li><a href="#portfolio-banner">Portfolio</a></li>
+            <li><a href="#about-banner">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div id="header-icons">
+          <a href="https://github.com/walterUlreich" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/walter-ulreich-b85715126/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/wally.ulreich" target="_blank"><i class="fab fa-facebook-square"></i></a>
         </div>
-        <div id="menu-icon">
-          <a class="burger-nav">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-          </a>
+        <div class="text-center" id="title">
+          <h1>Walter Ulreich</h1>
+          <h2>Web Developer // Front-End Designer</h2>
         </div>
+        <a href="#portfolio-banner" id="my-work">My Work</a>
       </div>
+    </header>
 
-      <div class="main container-fluid">
-        <!--<img class="rounded-circle" src="me.jpg" height="240" width="260">-->
-        <div class="icon text-center">
-          <span class="wu"><i class="fa fa-angle-left" aria-hidden="true"></i>WU<i class="fa fa-angle-right" aria-hidden="true"></i></span>
-        </div>
-        <h3 class="text-center">Web Developer // Front-End Designer</h3>
+    <section id="portfolio-banner">
+      <div id="overlay-portfolio">
+        <h2 class="heading">Portfolio</h2>
+        <p>Below is a list of projects that I have been working on lately. The source code for these projects can be viewed on my GitHub account: <a href="https://github.com/walterUlreich" target="_blank">https://github.com/walterUlreich</a></p>
       </div>
+    </section>
 
-      <div id="about">
-      <div class="about container text-center">
-        <h2>About</h2><hr class="hr">
-        <div class="row about-first-row">
-          <div class="col-md-6">
-            <p>Hi! My name is Walter Ulreich and I am a Frontend Web Developer from the suburbs of Chicago, Illinois.<br><br> I currently live in Cary, Illinois and I have a passion for designing web-based appliciations.<br><br> In my free time I can be found playing and teaching music, riding bikes, and frequenting local coffee shops. </p>
-          </div>
-          <div class="col-md-6">
-            <img class="rounded-circle" src="images/me.jpg" height="240" width="280">
-            <div class="about-icons">
-              <i class="fa fa-music" aria-hidden="true"></i>
-              <i class="fa fa-bicycle" aria-hidden="true"></i>
-              <i class="fa fa-coffee" aria-hidden="true"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
+    <section class="portfolio">
+      <h3>Walter Ulreich Music</h3><hr class="underline">
+      <p>A portfolio website that I am currently using to promote myself as a musician and music educator.</p>
+      <a href="music/index.html" target="_blank"><img src="images/music.png" width="600px" height="auto"></a>
+    </section>
 
-      <div id="portfolio">
-      <div class="portfolio container-fluid text-center">
-        <h2>Web Portfolio</h2><hr class="hr">
-        <div class="row portfolio-music">
-          <div class="col-md-4">
-            <a href="music/index.html" target="_blank"><img src="images/music.png" width="420" height="260" class="gallery_image"></a>
-          </div>
-          <div class="col-md-6 text-left description">
-            <h3>Walter Ulreich Music</h3>
-            <p>I am currently in the process of developing this website, which will eventually serve as the portfolio site for my career as a musician and music educator.</p>
-          </div>
-        </div>
-        <div class="row portfolio-row">
-          <div class="col-md-4">
-            <a href="restaurant/index.html" target="_blank"><img src="images/cucos.png" width="420" height="260" class="gallery_image"></a>
-          </div>
-          <div class="col-md-6 text-left description">
-            <h3>Cuco's Burrito Express</h3>
-            <p>This is an example of a website that I created for a local restaurant using HTML, CSS, and jQuery.</p>
-          </div>
-        </div>
-        <div class="row portfolio-row">
-          <div class="col-md-4">
-            <a href="book-club/dashboard.html" target="_blank"><img src="images/book.png" width="420" height="260" class="gallery_image"></a>
-          </div>
-          <div class="col-md-6 text-left description">
-            <h3>Book Club</h3>
-            <p>Book Club is a full-stack application that I created for my final project at CodeCraft School of Technology. Once Book Club members log in to their group's page, they can keep track of books that they have read, vote for next month's book, and use the chat application to chat with other group members. Additional features are currently in the works!  </p>
-          </div>
-        </div>
-        <div class="row portfolio-row">
-          <div class="col-md-4">
-            <a href="health-hawk/public/dash.html" target="_blank"><img src="images/health2.png" width="420" height="260" class="gallery_image"></a>
-          </div>
-          <div class="col-md-6 text-left description">
-            <h3>healthHawk</h3>
-            <p>healthHawk is a full-stack application that I contributed to as part of a group hackathon project at the CodeCraft School of Technology. healthHawk allows the user to create and log in to a personal profile, where they can keep track of what foods they have eaten and how many calories they have consumed throughout the day.</p>
-          </div>
-        </div>
-      </div>
-      </div>
+    <section class="portfolio">
+      <h3>Cuco's Burrito Express</h3><hr class="underline">
+      <p>A website that I designed for a local Mexican Restaurant.</p>
+      <a href="restaurant/index.html" target="_blank"><img src="images/cucos.png" width="600px" height="auto"></a>
+    </section>
 
-      <div id="contact">
-      <div class="container contact text-center">
-        <h2>Contact Me</h2><hr class="hr">
-        <div class="row">
-          <div class="col-md-4" id="first-icon">
-            <span class="fa fa-map-marker"></span>
-            <p>Chicago, Illinois</p>
+    <section class="portfolio">
+      <h3>Book Club</h3><hr class="underline">
+      <p>A full-stack application that I completed as a student at CodeCraft School of Technology.</p>
+      <a href="book-club/dashboard.html" target="_blank"><img src="images/book.png" width="600px" height="auto"></a>
+    </section>
+
+    <section class="portfolio">
+      <h3>HealthHawk</h3><hr class="underline">
+      <p>A full-stack application that I completed as a student at CodeCraft School of Technology.</p>
+      <a href="health-hawk/public/dash.html" target="_blank"><img src="images/health2.png" width="600px" height="auto"></a>
+    </section>
+
+    <section id="about-banner">
+      <div class="overlay-two">
+        <h2 class="heading">About</h2>
+        <p>I am a front-end JavaScript developer and web designer located in the Northwest suburbs of Chicago, Illinois. Having graduated from CodeCraft School of Technology in Boulder, Colorado, I have a passion for design and an interest in developing web-based applications for a wide range of devices. I spend most of my free time playing music, riding bikes, and frequenting local coffee shops.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="heading">Contact</h2>
+        <div class="row contact-icons">
+          <div class="col-md-4 text-center">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Chicago, IL</p>
           </div>
-          <div class="col-md-4">
-            <span class="fa fa-phone"></span>
-            <p>mob. +847 791 8811</p>
+          <div class="col-md-4 text-center">
+            <i class="fas fa-mobile-alt"></i>
+            <p>847-791-8811</p>
           </div>
-          <div class="col-md-4">
-            <span class="fa fa-envelope"></span>
+          <div class="col-md-4 text-center">
+            <i class="fas fa-envelope"></i>
             <p>wulreich99@gmail.com</p>
           </div>
         </div>
       </div>
-      </div>
+    </section>
 
-      <div class="footer container-fluid text-center">
-        <p>&copy; All rights reserved 2017 | Design by <span>Walter Ulreich</span></p>
-        <div class="icons">
-          <a href="#top"><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/in/walter-ulreich-b85715126/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-          <a href="https://github.com/walterUlreich" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+    <footer id="#footer">
+      <div class="container">
+        <div class="footer-icons text-center">
+          <a href="https://github.com/walterUlreich" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/walter-ulreich-b85715126/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/wally.ulreich" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        </div>
+        <div class="footer-text text-center">
+          <h3 class="heading">Walter Ulreich</h3>
+          <p>Copyright &copy; 2018</p>
         </div>
       </div>
+      <a href="#top" id="arrow"><i class="fas fa-arrow-circle-up"></i></a>
+    </footer>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="main.js"></script>
-    </body>
+
+    <script src="main.js"></script>
+  </body>
 </html>
