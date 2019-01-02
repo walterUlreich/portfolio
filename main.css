@@ -166,7 +166,7 @@ nav ul li a:hover {
   margin-bottom: 60px;
 }
 
-.portfolio:nth-child(even) {
+.portfolio:nth-child(odd) {
   background-color: #eee;
 }
 
