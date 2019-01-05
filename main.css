@@ -275,3 +275,71 @@ footer {
   width: 100px;
   margin-bottom: 30px;
 }
+
+/**** Skills Section ****/
+#skills {
+  background-color: black;
+  color: white;
+  padding: 40px 0;
+}
+
+#skills .row {
+  margin-top: 20px;
+}
+
+.box {
+  width: 60px;
+  height: 60px;
+  background-color: #244D4D;
+  text-align: center;
+  color: white;
+  padding-top: 14px;
+  font-size: 120%;
+}
+
+.skill {
+  margin: 40px 20px;
+}
+
+.skill p {
+  font-size: 120%;
+  position: relative;
+  left: 70px;
+  bottom: 46px;
+}
+
+.meter {
+  height: 20px;
+  background-color: #ccc;
+  position: relative;
+  bottom: 20px;
+}
+
+.level {
+  background-color: #244D4D;
+  height: 100%;
+}
+
+#html {
+  width: 90%;
+}
+
+#css {
+  width: 85%;
+}
+
+#js {
+  width: 75%;
+}
+
+#jquery {
+  width: 80%;
+}
+
+#vue {
+  width: 70%;
+}
+
+#adobe {
+  width: 70%;
+}
