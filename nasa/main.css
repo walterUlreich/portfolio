@@ -1,0 +1,53 @@
+body {
+  background-color: #FFF8E7;
+  background-color: black;
+  color: white;
+}
+
+.header {
+  font-family: 'Press Start 2P', cursive;
+  background: url('https://images.pexels.com/photos/1694000/pexels-photo-1694000.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-position: center top;
+  background-size: cover;
+  color: white;
+}
+
+.col-md-4,
+.col-md-8 {
+  text-align: center;
+}
+
+.col-md-4 {
+  padding: 10px 0;
+}
+
+.col-md-8 {
+  padding: 120px 0;
+}
+
+.container {
+  text-align: center;
+  width: 70%;
+}
+
+.container h3 {
+  font-family: 'IBM Plex Mono', monospace;
+  margin: 20px auto;
+  padding: 10px;
+  color: #98f791;
+}
+
+#form {
+  margin: 0 auto;
+  display: block;
+}
+
+.table {
+  background-color: white;
+  color: black;
+  margin: 40px auto;
+}
+
+.true {
+  color: red;
+}

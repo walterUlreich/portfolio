@@ -13,14 +13,14 @@ body {
 
 #welcome {
   position: relative;
-  left: 200px;
+  left: 240px;
   top: 8px;
 }
 
 .icon {
   font-size: 200%;
   position: relative;
-  right: 220px;
+  right: 250px;
   color: #c61609;
 }
 
@@ -59,7 +59,7 @@ body {
 
 .navbar ul li {
   display: inline-block;
-  margin: 0 10px;
+  margin-right: 8px;
 }
 
 .jumbotron {
@@ -69,53 +69,6 @@ body {
   background-size: cover;
   background-position: center center;
   margin-bottom: 0;
-}
-
-.hr {
-  margin-bottom: 60px;
-  width: 800px;
-}
-
-.title {
-  margin-top: 100px;
-}
-
-#first-title {
-  margin-top: 20px;
-}
-
-.table {
-  margin-bottom: 80px;
-}
-
-table th {
-  text-align: center;
-}
-
-.future {
-  margin-bottom: 40px;
-}
-
-.btn {
-  cursor: pointer;
-}
-
-.form {
-  border: 1px solid #ccc;
-  width: 700px;
-  padding: 40px;
-  border-radius: 5px;
-  margin: 0 auto;
-  background-color: #92f4b1;
-}
-
-.main-content {
-  background-color: #fff;
-  padding: 40px;
-}
-
-.formItems {
-  margin-right: 5px;
 }
 
 .footer {
@@ -161,4 +114,60 @@ table th {
   position: absolute;
   right: 592px;
   top: 90px;
+}
+
+/**** New CSS ****/
+.container {
+  width: 60%;
+  padding: 40px 0;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+h1 {
+  font-family: 'Maven Pro', sans-serif;
+}
+
+#bmi-form {
+  margin: 40px auto;
+}
+
+#bmi-div {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.badge {
+  padding: 8px;
+  margin-top: 20px;
+  font-size: 80%;
+}
+
+#food-form {
+  margin: 40px auto;
+}
+
+#table {
+  margin: 40px auto;
+  background-color: white;
+}
+
+.delete {
+  padding: 4px;
+  background-color: #333;
+  color: white;
+}
+
+#total-calories {
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+#total-calories span {
+  font-size: 120%;
 }

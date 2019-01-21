@@ -1,31 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
-
-
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="dash.css">
   </head>
 
   <body>
-
-    <div id="app">
 
         <div class="navbar">
             <a href="#"><h3 id="logoText">healthHAWK</h3></a>
             <div class="icon">
               <span class="fa fa-heartbeat" aria-hidden="true"></span>
             </div>
-            <p id="welcome">Hello, {{user.username}}</p>
+            <p id="welcome">Hello, Walter</p>
             <ul>
               <a href="#" class="link"><li><i class="fa fa-user-circle" aria-hidden="true"></i>Profile</li></a>
-              <a href="index.html" class="link"><li>Logout</li></a>
+              <a href="#" class="link"><i class="fas fa-sign-out-alt"></i><li>Logout</li></a>
             </ul>
         </div>
 
@@ -44,72 +38,61 @@
           </div>
         </div>
 
-        <div class="container text-center main-content">
-
-          <h3 class="title" id="first-title">Eating Habits Overview</h3>
-          <hr class="hr">
-
-
-        <div class="container">
-          <div id="canvasContainer" class="row">
-              <div class="col-md-6 canvas">
-                <canvas id="theCanvas"></canvas>
+        <div class="container text-center">
+          <h1>Calculate Your BMI</h1>
+          <form id="bmi-form">
+            <div class="form-row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="feet" id="feet">
               </div>
-              <div class="col-md-6 canvas">
-                <canvas id="theCanvas2"></canvas>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="inches" id="inches">
               </div>
-          </div>
-        </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="pounds" id="weight">
+              </div>
+              <div class="col">
+                <input type="submit" class="form-control btn btn-primary" value="Calculate BMI">
+              </div>
+            </div>
+          </form>
 
+          <h3 class="text-center">Result</h3>
+          <div id="bmi-div"></div>
 
+          <h1>Calorie Tracker</h1>
+          <form id="food-form">
+            <div class="form-row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="food" id="food">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="calories" id="calories">
+              </div>
+              <div class="col">
+                <input type="date" class="form-control" placeholder="date" id="date" data-date-format="mm/dd/yyyy">
+              </div>
+              <div class="col">
+                <input type="submit" class="form-control btn btn-primary" value="Submit Item">
+              </div>
+            </div>
+          </form>
 
-        <h3 class="title">Add Meals</h3>
-        <hr class="hr">
-
-        <form v-on:submit="createMeal" class="form" id="mealSubmit">
-            <select v-model="foodObj" options="myOptions" class="formItems">
-                <option v-for="option in myOptions" v-bind:value="option">
-                {{ option.text }}
-                </option>
-
-            </select>
-            <select v-model="mealName" class="formItems">
-                <option>Breakfast</option>
-                <option>Lunch</option>
-                <option>Dinner</option>
-                <option>Snack</option>
-            </select>
-            <input class="roundEdge formItems" v-model="mealDate" type="date" placeholder="Date">
-            <input class="btn  btn-dark formItems" id="submit" type="submit" value="Submit Your Meal!">
-        </form>
-
-
-
-        <h3 class="title">Overall Meal List</h3>
-        <hr class="hr">
-
-        <table class="table table-striped" id="table">
-            <thead class="thead-inverse">
-                <tr>
-                    <th>Food</th>
-                    <th>Meal</th>
-                    <th>Calories</th>
-                    <th>Date</th>
-                </tr>
+          <table class="table" id="table">
+            <thead class="thead thead-dark">
+              <tr>
+                <th scope="col">Food</th>
+                <th scope="col">Calories</th>
+                <th scope="col">Date</th>
+                <th scope="col"></th>
+              </tr>
             </thead>
-            <tbody>
-                <tr v-for="x in allMeals">
-                    <td>{{x.foodname}} </td>
-                    <td>{{x.mealname}}</td>
-                    <td>{{x.calories}}</td>
-                    <td>{{x.mealdate.toLocaleDateString()}}</td>
-                </tr>
+            <tbody id="table-body">
+
             </tbody>
-        </table>
+          </table>
 
-
-            <a href="/future.html"><button class="btn btn-primary future">Future Features</button></a>
-
+          <div id="total-calories"></div>
         </div>
 
     <div class="footer container-fluid">
@@ -117,16 +100,14 @@
       <div class="footer-logo-icon">
         <span class="fa fa-heartbeat" aria-hidden="true"></span>
       </div>
-      <p class="text-center">&copy; Copyright 2017 | Design by Walter Ulreich</p>
+      <p class="text-center">&copy; Copyright 2019 | Design by Walter Ulreich</p>
       <div class="footer-icons">
-        <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+        <a href="#"><i class="fab fa-twitter-square"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest-square"></i></a>
       </div>
     </div>
-
-  </div>
 
 
     <script src="main.js"></script>
