@@ -1,0 +1,139 @@
+body {
+  background-color: black;
+}
+
+.header {
+  background: url('https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  color: white;
+  height: 300px;
+  text-align: center;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.3);
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+}
+
+
+.title {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.title h1 {
+  font-family: 'Lobster', cursive;
+  position: relative;
+  top: 10px;
+}
+
+.title i {
+  font-size: 800%;
+  position: relative;
+}
+
+.list-link {
+  position: relative;
+  left: 560px;
+  margin-right: 2px;
+  font-size: 120%;
+  font-family: 'Varela', sans-serif;
+}
+
+.list-link i {
+  margin-left: 8px;
+}
+
+.container {
+  padding-top: 20px;
+}
+
+.book {
+  padding: 10px;
+  margin-bottom: 8px;
+  text-align: center;
+  background-color: #eee;
+  font-family: 'Varela', sans-serif;
+  border-radius: 4px;
+}
+
+.book img {
+  margin-bottom: 10px;
+}
+
+.book a {
+  display: block;
+  width: 10%;
+  margin: 10px auto;
+}
+
+#book-info {
+  color: white;
+  font-family: 'Varela', sans-serif;
+  padding-bottom: 40px;
+}
+
+#book-info h3 {
+  color: lightgreen;
+}
+
+#book-info p {
+  font-size: 110%;
+}
+
+#book-info img {
+  margin-bottom: 20px;
+}
+
+#form {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 40%;
+}
+
+#book-list {
+  color: white;
+}
+
+.book-title {
+  font-style: italic;
+}
+
+.info-link {
+  text-align: center;
+  color: blue;
+  font-size: 120%;
+}
+
+.info-link a {
+  cursor: pointer;
+}
+
+#table-body {
+  background-color: white;
+  color: black;
+}
+
+a.btn i {
+  margin-left: 8px;
+}
+
+.list-container h3 {
+  color: lightgreen;
+  font-family: 'Varela', sans-serif;
+  margin: 20px auto;
+}
+
+.delete {
+  cursor: pointer;
+}
+
+.delete:hover {
+  color: blue !important;
+  text-decoration: underline !important;
+}
