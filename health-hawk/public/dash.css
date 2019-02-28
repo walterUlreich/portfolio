@@ -20,13 +20,13 @@ body {
 .icon {
   font-size: 200%;
   position: relative;
-  right: 250px;
+  right: 260px;
   color: #c61609;
 }
 
 .navbar {
   height: 50px;
-  padding: 20px;
+  padding: 0px;
   background-color: #eee;
 }
 
