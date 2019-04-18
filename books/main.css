@@ -2,11 +2,12 @@ body {
   background-color: black;
 }
 
-.header {
-  background: url('books.jpeg');
-  color: white;
+header {
   height: 300px;
+  background: url("books.jpeg");
+  color: white;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .overlay {
@@ -16,14 +17,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  padding-top: 40px;
 }
-
 
 .title {
   text-align: center;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 60px;
 }
 
 .title h1 {
@@ -37,103 +36,109 @@ body {
   position: relative;
 }
 
-.list-link {
+.link {
   position: relative;
   left: 560px;
-  margin-right: 2px;
   font-size: 120%;
+  margin-right: 2px;
   font-family: 'Varela', sans-serif;
 }
 
-.list-link i {
+.link i {
   margin-left: 8px;
 }
 
-.container {
-  padding-top: 20px;
+.search {
+  color: white;
+}
+
+.search .form-control {
+  width: 50%;
+  margin: 0 auto;
 }
 
 .book {
-  padding: 10px;
-  margin-bottom: 8px;
-  text-align: center;
-  background-color: #eee;
-  font-family: 'Varela', sans-serif;
-  border-radius: 4px;
+  padding-bottom: 80px;
 }
 
-.book img {
-  margin-bottom: 10px;
-}
-
-.book a {
-  display: block;
-  width: 10%;
-  margin: 10px auto;
-}
-
-#book-info {
-  color: white;
-  font-family: 'Varela', sans-serif;
-  padding-bottom: 40px;
-}
-
-#book-info h3 {
+.book h3 {
   color: lightgreen;
-}
-
-#book-info p {
-  font-size: 110%;
-}
-
-#book-info img {
-  margin-bottom: 20px;
-}
-
-#form {
-  margin: 0 auto;
-  margin-bottom: 20px;
-  width: 40%;
-}
-
-#book-list {
-  color: white;
-}
-
-.book-title {
+  font-family: 'Varela', sans-serif;
   font-style: italic;
 }
 
-.info-link {
-  text-align: center;
-  color: blue;
+.book p {
   font-size: 120%;
 }
 
-.info-link a {
-  cursor: pointer;
+.book img {
+  margin-bottom: 20px;
 }
 
-#table-body {
-  background-color: white;
+.description {
+  margin-bottom: 40px;
+}
+
+.results {
+  text-align: center;
+  margin: 20px auto;
+  background-color: #eee;
+  padding: 10px;
   color: black;
+  border-radius: 4px;
 }
 
-a.btn i {
-  margin-left: 8px;
-}
-
-.list-container h3 {
-  color: lightgreen;
+.results h3 {
   font-family: 'Varela', sans-serif;
+  font-style: italic;
+}
+
+.results p {
+  font-size: 110%;
+}
+
+.results img {
+  display: block;
   margin: 20px auto;
 }
 
-.delete {
-  cursor: pointer;
+.book {
+  color: white;
 }
 
-.delete:hover {
-  color: blue !important;
-  text-decoration: underline !important;
+.book button i {
+  margin-left: 8px;
+}
+
+.book-list {
+  color: white;
+  padding-bottom: 80px;
+}
+
+.book-list h2 {
+  color: lightgreen;
+  font-family: 'Varela', sans-serif;
+  margin-bottom: 40px;
+}
+
+.book-list h4 {
+  font-style: italic;
+}
+
+.book-list img {
+  display: block;
+  margin: 20px auto;
+}
+
+.col-md-4 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn-danger {
+  margin-top: 8px;
+}
+
+.red {
+  color: red;
 }

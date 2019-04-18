@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>Book Club</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+    <link href="main.css" rel="stylesheet">
   </head>
   <body>
 
-    <div class="header">
-      <div class="overlay">
-        <div class="title">
-          <h1>Book Club</h1>
-          <i class="fas fa-book-open"></i>
+    <div id="app">
+      <header>
+        <div class="overlay">
+          <div class="title">
+            <h1>Book Club</h1>
+            <i class="fas fa-book-open"></i>
+          </div>
+          <router-link to="/" class="btn btn-success link">Home<i class="fas fa-home"></i></router-link>
+          <router-link to="/book-list" class="btn btn-success link">My Book List<i class="fas fa-book"></i></router-link>
         </div>
-        <a href="index.html" class="btn btn-success list-link">Home<i class="fas fa-home"></i></a>
-        <a href="book-list.html" class="btn btn-success list-link">My Book List<i class="fas fa-book"></i></a>
+      </header>
+      <div class="container">
+        <router-view></router-view>
       </div>
+
     </div>
 
-    <div class="container">
-      <form class="form" id="form">
-        <div class="form-group">
-          <input type="text" class="form-control mb-2" id="input" placeholder="search books...">
-          <button type="submit" class="btn btn-primary form-control">Submit</button>
-        </div>
-      </form>
-      <div id="books"></div>
-    </div>
-
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
