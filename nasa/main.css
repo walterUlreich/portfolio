@@ -1,53 +1,54 @@
 body {
-  background-color: #FFF8E7;
   background-color: black;
   color: white;
 }
 
-.header {
+header {
+  border: 1px solid black;
+  height: 300px;
   font-family: 'Press Start 2P', cursive;
-  background: url('space.jpeg');
-  background-position: center top;
-  background-size: cover;
   color: white;
-}
-
-.col-md-4,
-.col-md-8 {
-  text-align: center;
+  background: url('space2.jpeg');
+  background-size: cover;
+  background-position: center top;
 }
 
 .col-md-4 {
-  padding: 10px 0;
+  height: 300px;
+  padding-top: 20px;
+}
+
+.col-md-4 img {
+  position: relative;
+  left: 40px;
 }
 
 .col-md-8 {
-  padding: 120px 0;
+  text-align: center;
+  padding-top: 100px;
 }
 
-.container {
-  text-align: center;
-  width: 70%;
+.col-md-8 h2 {
+  line-height: 1.5em;
 }
 
 .container h3 {
   font-family: 'IBM Plex Mono', monospace;
-  margin: 20px auto;
-  padding: 10px;
   color: #98f791;
+  margin: 20px 0;
 }
 
 #form {
-  margin: 0 auto;
   display: block;
 }
 
 .table {
   background-color: white;
   color: black;
-  margin: 40px auto;
+  margin: 40px 0;
 }
 
 .true {
   color: red;
+  font-weight: bold;
 }
