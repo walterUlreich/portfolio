@@ -1,25 +1,14 @@
 body {
-  margin: 0;
-  padding: 0;
-  background: black;
-}
-
-.search {
-  text-align: center;
-}
-
-.search h3 {
-  font-family: 'Pacifico', cursive;
-  margin: 40px 0 20px 0;
-  color: lightgreen;
+  background-color: black;
+  color: white;
 }
 
 .jumbotron {
+  text-align: center;
   height: 200px;
-  margin-bottom: 40px;
-  background: url('movie.jpeg');
-  background-position: center top;
+  background: url('https://images.pexels.com/photos/758976/pexels-photo-758976.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-size: cover;
+  background-position: center top;
 }
 
 .logo {
@@ -53,62 +42,54 @@ body {
   color: white;
 }
 
-.jumbotron {
-  color: white;
+.search {
+  width: 60%;
+  margin: 40px auto;
+}
+
+.search h3 {
+  font-family: 'Pacifico', cursive;
+  color: lightgreen;
+  margin-bottom: 20px;
 }
 
 .movies {
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 
-#search-form {
-  width: 60%;
-  margin: 0 auto;
+.col-md-3 {
+  margin: 20px 0;
+}
+
+.movies h5 {
+  margin: 12px 0;
+}
+
+.movie-title {
+  color: lightgreen;
   margin-bottom: 40px;
 }
 
-#movie {
-  margin-bottom: 40px;
+.movie-selected {
+  padding-bottom: 40px;
 }
 
-#movie-title {
+.movie-selected h3 {
   color: lightgreen;
 }
 
-#movie h3,
-#movie p {
-  color: white;
+.list-group {
+  color: black;
 }
 
-#movie p {
+.movie-selected .col-md-12 {
+  margin: 20px 0;
+}
+
+.movie-selected .col-md-12 h3 {
+  color: gold;
+}
+
+.movie-selected .col-md-12 p {
   font-size: 120%;
-}
-
-#movie h2 {
-  margin-bottom: 40px;
-  color: lightgreen;
-}
-
-#movie h3 {
-  margin-top: 40px;
-  color: lightgreen;
-}
-
-#movies img, #movie img {
-  width: 100%;
-}
-
-#movies .col-md-3 .well {
-  height: 390px;
-  margin: 20px;
-  margin-bottom: 40px;
-}
-
-#movies .col-md-3 .well h5 {
-  color: white;
-  margin-top: 20px;
-}
-
-#movies .col-md-3 img {
-  height: 300px;
 }
