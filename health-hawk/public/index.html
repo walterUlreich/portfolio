@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>healthHAWK</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div id="app">
+      <header>
+        <div class="logo">
+          <a href="#">healthHAWK</a>
+          <i class="fas fa-heartbeat"></i>
+        </div>
+        <p class="welcome">
+          Welcome, <span class="green">{{ userName }}</span>
+        </p>
+        <ul class="nav">
+          <li>Profile<i class="fas fa-user-circle"></i></li>
+          <li>Logout<i class="fas fa-sign-out-alt"></i></li>
+        </ul>
+      </header>
+      <div class="jumbotron">
+
+      </div>
+      <div class="container text-center">
+        <h1 class="heading">Calculate Your BMI</h1>
+        <hr class="hr"/>
+        <form id="bmi-form" v-on:submit.prevent="displayBMI()">
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="feet" v-model="feet">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="inches" v-model="inches">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="pounds" v-model="pounds">
+            </div>
+            <div class="col">
+              <input type="submit" class="form-control btn btn-primary" value="Calculate BMI">
+            </div>
+          </div>
+        </form>
+
+        <h3 class="text-center">Result</h3>
+        <div id="bmi-div">
+          <div class="bmi" v-if="showBMI">
+            <p>Your BMI</p>
+            <h1 v-bind:class="{'text-success': bmi > 18.5 && bmi < 24.9, 'text-info': bmi < 18.5, 'text-warning': bmi > 25 && bmi < 29.9, 'text-danger': bmi > 30}">{{ bmi }}</h1>
+            <span class="badge badge-info">Underweight < 18.5</span>
+            <span class="badge badge-success">Normal 18.5 - 24.9</span>
+            <span class="badge badge-warning">Overweight 25 - 29.9</span>
+            <span class="badge badge-danger">Obese > 30</span>
+          </div>
+        </div>
+
+        <div class="banner"></div>
+
+        <h1 class="heading">Calorie Tracker</h1>
+        <hr class="hr"/>
+        <form id="food-form" v-on:submit.prevent="addFoodItem()">
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="food" v-model="food">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="calories" v-model="calories">
+            </div>
+            <div class="col">
+              <input type="date" class="form-control" placeholder="date" v-model="date" data-date-format="mm/dd/yyyy">
+            </div>
+            <div class="col">
+              <input type="submit" class="form-control btn btn-primary" value="Submit Item">
+            </div>
+          </div>
+        </form>
+
+        <table class="table" id="table" v-if="foodItems.length > 0">
+          <thead class="thead thead-dark">
+            <tr>
+              <th scope="col">Food</th>
+              <th scope="col">Calories</th>
+              <th scope="col">Date</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody id="table-body" v-for="item in foodItems">
+            <tr>
+              <td>{{ item.food }}</td>
+              <td>{{ item.calories }}</td>
+              <td>{{ item.date }}</td>
+              <td v-on:click="deleteItem(item.id, item.calories)"><i class="fas fa-times-circle delete"></i></td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn btn-danger btn-block" id="clear-list" v-if="foodItems.length > 0" v-on:click="clearList()">Clear List</button>
+
+        <div id="total-calories" v-if="foodItems.length > 0">
+          <p>Your total cals:</p>
+          <span class="total-cals">{{ totalCals }}</span>
+        </div>
+      </div>
+
+      <footer class="text-center">
+        <div class="footer-logo">
+          <h3>healthHAWK</h3>
+          <i class="fas fa-heartbeat"></i>
+        </div>
+        <p>&copy; Copyright 2019 | Design by Walter Ulreich</p>
+        <div class="footer-icons">
+          <a href="#"><i class="fab fa-facebook-square"></i></a>
+          <a href="#"><i class="fab fa-twitter-square"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest-square"></i></a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

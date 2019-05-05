@@ -1,0 +1,175 @@
+body {
+  background-color: #ddd;
+}
+
+header {
+  height: 60px;
+}
+
+.logo {
+  position: relative;
+  left: 40px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.logo a {
+  font-size: 180%;
+  color: black;
+  font-family: 'Racing Sans One', cursive;
+}
+
+.logo a:hover {
+  text-decoration: none;
+}
+
+.logo i {
+  font-size: 180%;
+  color: red;
+}
+
+.welcome {
+  position: absolute;
+  right: 300px;
+  top: 20px;
+}
+
+.green {
+  color: green;
+}
+
+.nav {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+}
+
+.nav li {
+  margin-left: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.nav li i {
+  font-size: 120%;
+  margin-left: 6px;
+}
+
+.jumbotron {
+  background: url('https://images.pexels.com/photos/235922/pexels-photo-235922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-size: cover;
+  background-position: center 36%;
+  height: 400px;
+}
+
+.container {
+  width: 60%;
+  font-family: 'Maven Pro', sans-serif;
+  min-height: 900px;
+}
+
+.heading {
+
+}
+
+.hr {
+  width: 20%;
+  margin-bottom: 40px;
+}
+
+form {
+  margin-bottom: 40px;
+}
+
+#bmi-div {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.bmi {
+  padding-top: 20px;
+}
+
+.badge {
+  padding: 8px;
+  margin-top: 20px;
+  font-size: 80%;
+}
+
+#table {
+  margin-bottom: 80px;
+  background-color: white;
+}
+
+.delete {
+  cursor: pointer;
+}
+
+#clear-list {
+  position: relative;
+  bottom: 60px;
+}
+
+#total-calories {
+  background-color: green;
+  padding: 10px;
+  font-size: 120%;
+  color: white;
+  border-radius: 4px;
+  margin: -20px auto 80px auto;
+  width: 40%;
+}
+
+#total-calories p {
+  position: relative;
+  top: 20px;
+}
+
+.total-cals {
+  font-size: 600%;
+  position: relative;
+  bottom: 20px;
+}
+
+footer {
+  height: 300px;
+  background-color: #4b4f4c;
+  color: #fff;
+  margin-top: 40px;
+}
+
+footer p {
+  position: relative;
+  top: 120px;
+}
+
+.footer-logo {
+  position: relative;
+  top: 100px;
+  font-family: 'Racing Sans One', cursive;
+}
+
+.footer-logo i {
+  position: absolute;
+  right: 604px;
+  top: 4px;
+  color: red;
+  font-size: 180%;
+}
+
+.footer-icons {
+  font-size: 300%;
+  position: absolute;
+  right: 140px;
+}
+
+.footer-icons a {
+  color: #fff;
+  margin: 0 4px;
+}
