@@ -1,0 +1,92 @@
+body {
+  background-color: #161a47;
+}
+
+.banner {
+  height: 100px;
+  padding: 20px;
+  color: white;
+  font-family: 'Fugaz One', cursive;
+  margin-top: 20px;
+  letter-spacing: .125em;
+}
+
+.banner i {
+  margin: 0 4px;
+  font-size: 80%;
+}
+
+#searchForm {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.weather {
+  background-color: lightblue;
+  color: #333;
+  width: 70%;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 4px;
+  margin-bottom: 40px;
+}
+
+.weather h3 {
+  font-size: 240%;
+}
+
+#icon {
+  font-size: 260%;
+}
+
+.text {
+  font-size: 120%;
+  border: 1px solid #333;
+  width: 40%;
+  border-radius: 4px;
+  margin: 10px auto;
+}
+
+#description {
+  margin-bottom: 20px;
+  font-size: 120%;
+}
+
+.forecast h1 {
+  margin: 80px 0 40px 0;
+  color: #ddd;
+}
+
+.hourly {
+  padding: 40px;
+  border-bottom: 2px solid #aaa;
+  color: lightblue;
+  width: 80%;
+  margin: 0 auto;
+  letter-spacing: .075em;
+}
+
+.hourly:last-child {
+  border-bottom: none;
+}
+
+.hourly-icon {
+  font-size: 200%;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.grey {
+  color: grey;
+}
+
+.lightgrey {
+  color: lightgrey;
+}
+
+.blue {
+  color: blue;
+}
