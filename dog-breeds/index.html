@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Breeds</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/62755a28b2.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div id="app">
+      <div class="wrapper">
+        <header>
+          <router-link to="/" id="title">Dog Breeds</router-link>
+          <div class="burger-nav" id="burger-nav" v-on:click="toggleNav()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <nav id="nav" class="nav">
+            <!-- use router-link component for navigation. -->
+            <!-- specify the link by passing the `to` prop. -->
+            <!-- `<router-link>` will be rendered as an `<a>` tag by default -->
+            <router-link to="/" class="link">Home</router-link>
+            <router-link to="/terrier" class="link">Terrier</router-link>
+            <router-link to="/toy" class="link">Toy</router-link>
+            <router-link to="/working" class="link">Working</router-link>
+            <router-link to="/sporting" class="link">Sporting</router-link>
+            <router-link to="/hound" class="link">Hound</router-link>
+            <router-link to="/non-sporting" class="link">Non-Sporting</router-link>
+            <router-link to="/herding" class="link">Herding</router-link>
+          </nav>
+
+        </header>
+
+        <div class="content">
+          <!-- route outlet -->
+          <!-- component matched by the route will render here -->
+          <router-view></router-view>
+        </div>
+
+        <footer>
+          <p>Dog Breeds &copy; 2019</p>
+        </footer>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

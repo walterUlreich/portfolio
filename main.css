@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 header {
@@ -222,17 +223,24 @@ nav ul li a:hover {
   top: 80px;
 }
 
-.contact-icons i {
-  font-size: 200%;
-  margin-bottom: 20px;
-}
-
 .contact-icons {
   font-size: 180%;
   padding: 20px;
   position: relative;
   top: 140px;
   font-family: 'Lato', sans-serif;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
+.contact-group {
+  text-align: center;
+}
+
+.contact-group i {
+  font-size: 200%;
+  margin-bottom: 20px;
 }
 
 footer {
@@ -284,8 +292,11 @@ footer {
   padding: 40px 0;
 }
 
-#skills .row {
-  margin-top: 20px;
+.skills-row {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
 }
 
 .box {
@@ -299,7 +310,7 @@ footer {
 }
 
 .skill {
-  margin: 40px 20px;
+  //margin: 40px 20px;
 }
 
 .skill p {
@@ -343,4 +354,69 @@ footer {
 
 #adobe {
   width: 70%;
+}
+
+@media(max-width: 500px) {
+  #logo, nav, #header-icons {
+    display: none;
+  }
+  header {
+    height: 500px;
+  }
+  #title {
+    top: 160px;
+  }
+  #title h1 {
+    font-size: 300%;
+  }
+  #title h2 {
+    font-size: 160%;
+  }
+  #my-work {
+    top: 200px;
+  }
+  #portfolio-banner p {
+    width: 90%;
+  }
+  #overlay-portfolio {
+    padding: 0;
+  }
+  .portfolio img {
+    width: 100%;
+  }
+  #about-banner {
+    height: 600px;
+  }
+  #about-banner p {
+    width: 90%;
+  }
+  .skills-row {
+    grid-template-columns: 1fr;
+  }
+  #contact {
+    height: 660px;
+  }
+  .contact-icons {
+    top: 100px;
+    grid-template-columns: 1fr;
+  }
+  .contact-group {
+    margin-bottom: 20px;
+  }
+}
+
+@media(max-width: 786px) {
+  #portfolio-banner p {
+    width: 90%;
+  }
+  #about-banner p {
+    width: 90%;
+  }
+  #contact {
+    height: 620px;
+  }
+  .contact-icons {
+    top: 100px;
+    grid-template-columns: 1fr;
+  }
 }
