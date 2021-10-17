@@ -1,110 +1,204 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <title>Walter Ulreich</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Walter Ulreich">
+    <meta name="description" content="A portfolio site for my work as a web developer.">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
 
-    <header id="top">
-      <div class="overlay">
-        <a href="#top" id="logo"></a>
-        <nav>
-          <ul>
-            <li><a href="#portfolio-banner">Portfolio</a></li>
-            <li><a href="#about-banner">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <div id="header-icons">
-          <a href="https://github.com/walterUlreich" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/walter-ulreich-b85715126/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.facebook.com/wally.ulreich" target="_blank"><i class="fab fa-facebook-square"></i></a>
+    <header id="top" class="header">
+      <div class="header-overlay">
+        <div class="header-left">
+          <div class="logo" title="Yep, that's me!"></div>
+          <nav class="nav">
+            <ul class="nav-list">
+              <li>
+                <a href="#portfolio-banner">Portfolio</a>
+              </li>
+              <li>
+                <a href="#about-banner">About</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <div class="text-center" id="title">
+        <div class="header-icons">
+          <a href="https://github.com/walterUlreich" target="_blank">
+            <svg class="icon icon-github">
+              <use xlink:href="#icon-github"></use>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/walter-ulreich-b85715126/" target="_blank">
+            <svg class="icon icon-linkedin">
+              <use xlink:href="#icon-linkedin"></use>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/wallyulreich" target="_blank">
+            <svg class="icon icon-file-text2">
+              <use xlink:href="#icon-file-text2"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="title text-center">
           <h1>Walter Ulreich</h1>
-          <h2>Web Developer // Front-End Designer</h2>
+          <h2>Web Developer / Front-End Designer</h2>
+          <a href="#portfolio-banner" class="my-work">My Work</a>
         </div>
-        <a href="#portfolio-banner" id="my-work">My Work</a>
       </div>
     </header>
 
-    <section id="portfolio-banner">
-      <div id="overlay-portfolio">
+    <section id="portfolio-banner" class="portfolio-banner">
+      <div class="container">
         <h2 class="heading">Portfolio</h2>
-        <p>Below is a list of projects that I have been working on lately. The source code for these projects can be viewed on my GitHub account: <a href="https://github.com/walterUlreich" target="_blank">https://github.com/walterUlreich</a></p>
+        <p>Below is a list of personal projects that I have been working on lately. The source code for these projects can be viewed on my GitHub account: <a href="https://github.com/walterUlreich" target="_blank">https://github.com/walterUlreich</a></p>
       </div>
     </section>
 
     <section class="portfolio">
-      <h3>Dog Breeds</h3><hr class="underline">
-      <p>A mobile-first, responsive web application that provides information on all of your favorite dog breeds.</p>
-      <a href="dog-breeds/index.html" target="_blank"><img src="images/dogs.png" width="600px" height="auto"></a>
+      <div class="container">
+        <h3>Dog Breeds</h3>
+        <hr class="underline">
+        <p>A mobile-first, responsive web application that provides information on all of your favorite dog breeds.</p>
+        <a href="dog-breeds/index.html" target="_blank">
+          <div class="portfolio__media">
+            <img src="images/dogs.png">
+            <div class="portfolio__overlay">
+              <span>View Site</span>
+            </div>
+          </div>
+        </a>
+      </div>
     </section>
 
     <section class="portfolio">
-      <h3>Book Club</h3><hr class="underline">
-      <p>Search for information on your favorite books with help from the Google Books API.</p>
-      <a href="books/index.html" target="_blank"><img src="images/book2.png" width="600px" height="auto"></a>
+      <div class="container">
+        <h3>Book Club</h3>
+        <hr class="underline">
+        <p>Search for information on your favorite books with help from the Google Books API.</p>
+        <a href="books/index.html" target="_blank">
+          <img src="images/book2.png">
+          <div class="portfolio__overlay">
+            <span>View Site</span>
+          </div>
+        </a>
+      </div>
     </section>
 
     <section class="portfolio">
-      <h3>Potentially-Hazardous Asteroid Tracker</h3><hr class="underline">
-      <p>A simple application that tracks potentially-hazardous asteroids using the NASA API.</p>
-      <a href="nasa/index.html" target="_blank"><img src="images/nasa3.png" width="600px" height="auto"></a>
+      <div class="container">
+        <h3>Potentially-Hazardous Asteroid Tracker</h3>
+        <hr class="underline">
+        <p>A simple application that tracks potentially-hazardous asteroids using the NASA API.</p>
+        <a href="nasa/index.html" target="_blank">
+          <img src="images/nasa3.png">
+          <div class="portfolio__overlay">
+            <span>View Site</span>
+          </div>
+        </a>
+      </div>
     </section>
 
     <section class="portfolio">
-      <h3>Jessica Grever Photography</h3><hr class="underline">
-      <p>A portfolio website that I created for a local photographer.</p>
-      <a href="http://104.248.62.55" target="_blank"><img src="images/photography.png" width="600px" height="auto"></a>
+      <div class="container">
+        <h3>Jessica Grever Photography</h3>
+        <hr class="underline">
+        <p>A portfolio website that I created for a local photographer.</p>
+        <a href="photography/index.html" target="_blank">
+          <img src="images/photography.png">
+          <div class="portfolio__overlay">
+            <span>View Site</span>
+          </div>
+        </a>
+      </div>
     </section>
 
     <section class="portfolio">
-      <h3>MovieInfo</h3><hr class="underline">
-      <p>A simple application that allows users to search for information about movies.</p>
-      <a href="movie-app/index.html" target="_blank"><img src="images/movie.png" width="600px" height="auto"></a>
+      <div class="container">
+        <h3>MovieInfo</h3>
+        <hr class="underline">
+        <p>A simple application that allows users to search for information about movies.</p>
+        <a href="movie-app/index.html" target="_blank">
+          <img src="images/movie.png">
+          <div class="portfolio__overlay">
+            <span>View Site</span>
+          </div>
+        </a>
+      </div>
     </section>
 
     <section class="portfolio">
-      <h3>Weather Find</h3><hr class="underline">
-      <p>A web-based application that uses the Open Weather API to provide current weather data.</p>
-      <a href="weather-app/index.html" target="_blank"><img src="images/weather.png" width="600px" height="auto"></a>
+      <div class="container">
+        <h3>Weather Find</h3>
+        <hr class="underline">
+        <p>A web-based application that uses the Open Weather API to provide current weather data.</p>
+        <a href="weather-app/index.html" target="_blank">
+          <img src="images/weather.png">
+          <div class="portfolio__overlay">
+            <span>View Site</span>
+          </div>
+        </a>
+      </div>
     </section>
 
     <section class="portfolio">
-      <h3>HealthHawk</h3><hr class="underline">
-      <p>A web-based application that I completed as a student at CodeCraft School of Technology.</p>
-      <a href="health-hawk/public/index.html" target="_blank"><img src="images/health3.png" width="600px" height="auto"></a>
+      <div class="container">
+        <h3>HealthHawk</h3>
+        <hr class="underline">
+        <p>A web-based application that I completed as a student at CodeCraft School of Technology.</p>
+        <a href="health-hawk/public/index.html" target="_blank">
+          <img src="images/health3.png">
+          <div class="portfolio__overlay">
+            <span>View Site</span>
+          </div>
+        </a>
+      </div>
     </section>
 
     <section class="portfolio">
-      <h3>Walter Ulreich Music</h3><hr class="underline">
-      <p>A portfolio website that I plan on using to promote myself as a musician and music educator.</p>
-      <a href="music/index.html" target="_blank"><img src="images/music.png" width="600px" height="auto"></a>
+      <div class="container">
+        <h3>Walter Ulreich Music</h3>
+        <hr class="underline">
+        <p>A portfolio website that I plan on using to promote myself as a musician and music educator.</p>
+        <a href="music/index.html" target="_blank">
+          <img src="images/music.png">
+          <div class="portfolio__overlay">
+            <span>View Site</span>
+          </div>
+        </a>
+      </div>
     </section>
 
     <section class="portfolio">
-      <h3>Cuco's Burrito Express</h3><hr class="underline">
-      <p>A website that I designed for a local Mexican Restaurant.</p>
-      <a href="restaurant/index.html" target="_blank"><img src="images/cucos.png" width="600px" height="auto"></a>
+      <div class="container">
+        <h3>Cuco's Burrito Express</h3>
+        <hr class="underline">
+        <p>A website that I designed for a local Mexican Restaurant.</p>
+        <a href="restaurant/index.html" target="_blank">
+          <img src="images/cucos.png">
+          <div class="portfolio__overlay">
+            <span>View Site</span>
+          </div>
+        </a>
+      </div>
     </section>
 
-    <section id="about-banner">
-      <div class="overlay-two">
+    <section id="about-banner" class="about-banner">
+      <div class="container">
         <h2 class="heading">About</h2>
-        <p>I am a front-end JavaScript developer and web designer located in the Northwest suburbs of Chicago, Illinois. Having graduated from CodeCraft School of Technology in Boulder, Colorado, I have a passion for design and an interest in developing web-based applications for a wide range of devices. I spend most of my free time playing music, riding bikes, and frequenting local coffee shops.</p>
+        <p>I'm a front-end JavaScript developer and web designer located in Evanston, Illinois. Having graduated from CodeCraft School of Technology in Boulder, Colorado, I have a passion for design and an interest in developing web-based applications for a wide range of devices. I spend most of my free time playing music, riding bikes, and frequenting local coffee shops.</p>
       </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="skills">
       <div class="container">
         <h2 class="heading text-center">Skills</h2>
         <div class="skills-row">
@@ -116,13 +210,6 @@
             </div>
           </div>
           <div class="skill">
-            <div class="box" id="jquery-box">J</div>
-            <p>jQuery</p>
-            <div class="meter">
-              <div class="level" id="jquery"></div>
-            </div>
-          </div>
-          <div class="skill">
             <div class="box">CSS</div>
             <p>Cascading Style Sheets</p>
             <div class="meter">
@@ -130,17 +217,24 @@
             </div>
           </div>
           <div class="skill">
-            <div class="box">V</div>
-            <p>Vue.js</p>
-            <div class="meter">
-              <div class="level" id="vue"></div>
-            </div>
-          </div>
-          <div class="skill">
             <div class="box">JS</div>
             <p>JavaScript</p>
             <div class="meter">
               <div class="level" id="js"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="box" id="jquery-box">J</div>
+            <p>jQuery</p>
+            <div class="meter">
+              <div class="level" id="jquery"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="box">V</div>
+            <p>Vue.js</p>
+            <div class="meter">
+              <div class="level" id="vue"></div>
             </div>
           </div>
           <div class="skill">
@@ -154,93 +248,98 @@
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="contact">
       <div class="container">
         <h2 class="heading text-center">Contact</h2>
         <div class="contact-icons">
           <div class="contact-group">
-            <i class="fas fa-map-marker-alt"></i>
-            <p>Chicago, IL</p>
+            <svg class="icon icon-location">
+              <use xlink:href="#icon-location"></use>
+            </svg>
+            <p>Evanston, IL</p>
           </div>
           <div class="contact-group">
-            <i class="fas fa-mobile-alt"></i>
+            <svg class="icon icon-mobile">
+              <use xlink:href="#icon-mobile"></use>
+            </svg>
             <p>847-791-8811</p>
           </div>
           <div class="contact-group">
-            <i class="fas fa-envelope"></i>
+            <svg class="icon icon-envelope">
+              <use xlink:href="#icon-envelope"></use>
+            </svg>
             <p>wulreich99@gmail.com</p>
           </div>
         </div>
       </div>
     </section>
 
-    <footer id="#footer">
+    <footer id="footer" class="footer">
       <div class="container">
         <div class="footer-icons text-center">
-          <a href="https://github.com/walterUlreich" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/walter-ulreich-b85715126/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.facebook.com/wally.ulreich" target="_blank"><i class="fab fa-facebook-square"></i></a>
+          <a href="https://github.com/walterUlreich" target="_blank">
+            <svg class="icon icon-github">
+              <use xlink:href="#icon-github"></use>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/walter-ulreich-b85715126/" target="_blank">
+            <svg class="icon icon-linkedin">
+              <use xlink:href="#icon-linkedin"></use>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/wally.ulreich" target="_blank">
+            <svg class="icon icon-file-text2">
+              <use xlink:href="#icon-file-text2"></use>
+            </svg>
+          </a>
         </div>
         <div class="footer-text text-center">
           <h3 class="heading">Walter Ulreich</h3>
-          <p>Copyright &copy; 2019</p>
+          <p>Copyright &copy; 2021</p>
         </div>
       </div>
-      <a href="#top" id="arrow"><i class="fas fa-arrow-circle-up"></i></a>
+      <a href="#top" id="arrow" class="arrow">
+        <svg class="icon icon-circle-up">
+          <use xlink:href="#icon-circle-up"></use>
+        </svg>
+      </a>
     </footer>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
 
-<!-- <div class="row">
-  <div class="col-md-4">
-    <div class="skill">
-      <div class="box">HTML</div>
-      <p>Hypertext Markup Language</p>
-      <div class="meter">
-        <div class="level" id="html"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <div class="box" id="jquery-box">J</div>
-      <p>jQuery</p>
-      <div class="meter">
-        <div class="level" id="jquery"></div>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="skill">
-      <div class="box">CSS</div>
-      <p>Cascading Style Sheets</p>
-      <div class="meter">
-        <div class="level" id="css"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <div class="box">V</div>
-      <p>Vue.js</p>
-      <div class="meter">
-        <div class="level" id="vue"></div>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="skill">
-      <div class="box">JS</div>
-      <p>JavaScript</p>
-      <div class="meter">
-        <div class="level" id="js"></div>
-      </div>
-    </div>
-    <div class="skill">
-      <div class="box">AI</div>
-      <p>Adobe Illustrator</p>
-      <div class="meter">
-        <div class="level" id="adobe"></div>
-      </div>
-    </div>
-  </div>
-</div> -->
+<div class="svg-legend">
+  <svg>
+    <symbol id="icon-circle-up" viewBox="0 0 32 32">
+      <path d="M0 16c0 8.837 7.163 16 16 16s16-7.163 16-16-7.163-16-16-16-16 7.163-16 16zM29 16c0 7.18-5.82 13-13 13s-13-5.82-13-13 5.82-13 13-13 13 5.82 13 13z"></path>
+      <path d="M22.086 20.914l2.829-2.829-8.914-8.914-8.914 8.914 2.828 2.828 6.086-6.086z"></path>
+    </symbol>
+    <symbol id="icon-envelope" viewBox="0 0 32 32">
+      <path d="M29 4h-26c-1.65 0-3 1.35-3 3v20c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3v-20c0-1.65-1.35-3-3-3zM12.461 17.199l-8.461 6.59v-15.676l8.461 9.086zM5.512 8h20.976l-10.488 7.875-10.488-7.875zM12.79 17.553l3.21 3.447 3.21-3.447 6.58 8.447h-19.579l6.58-8.447zM19.539 17.199l8.461-9.086v15.676l-8.461-6.59z"></path>
+      </symbol>
+    <symbol id="icon-facebook2" viewBox="0 0 32 32">
+      <path d="M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h13v-14h-4v-4h4v-2c0-3.306 2.694-6 6-6h4v4h-4c-1.1 0-2 0.9-2 2v2h6l-1 4h-5v14h9c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3z"></path>
+    </symbol>
+    <symbol id="icon-file-text2" viewBox="0 0 32 32">
+      <path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+      <path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+      <path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+      <path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+    </symbol>
+    <symbol id="icon-github" viewBox="0 0 32 32">
+      <path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 32 32">
+      <path d="M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3zM12 26h-4v-14h4v14zM10 10c-1.106 0-2-0.894-2-2s0.894-2 2-2c1.106 0 2 0.894 2 2s-0.894 2-2 2zM26 26h-4v-8c0-1.106-0.894-2-2-2s-2 0.894-2 2v8h-4v-14h4v2.481c0.825-1.131 2.087-2.481 3.5-2.481 2.488 0 4.5 2.238 4.5 5v9z"></path>
+    </symbol>
+    <symbol id="icon-location" viewBox="0 0 32 32">
+      <path d="M16 0c-5.523 0-10 4.477-10 10 0 10 10 22 10 22s10-12 10-22c0-5.523-4.477-10-10-10zM16 16c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z"></path>
+    </symbol>
+    <symbol id="icon-mobile" viewBox="0 0 32 32">
+      <path d="M23 0h-14c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3zM12 1.5h8v1h-8v-1zM16 30c-1.105 0-2-0.895-2-2s0.895-2 2-2 2 0.895 2 2-0.895 2-2 2zM24 24h-16v-20h16v20z"></path>
+    </symbol>
+  </svg>
+</div>

@@ -1,159 +1,203 @@
-body {
-  margin: 0;
-  padding: 0;
+* {
   box-sizing: border-box;
 }
 
-header {
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.svg-legend {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.header {
   background: url('images/skyscraper.jpg');
   background-size: cover;
   background-position: center center;
-  height: 700px;
+  height: 520px;
   font-family: 'Lato', sans-serif;
 }
 
-.overlay {
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 500;
+.header-overlay {
+  background: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100%;
 }
 
-#logo {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  background: url('images/me.jpg');
+.header-left {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 12px;
+  left: 24px;
+}
+
+.logo, .nav, .header-icons {
+  display: none;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  background: url('images/profile.jpg');
   background-size: cover;
   background-position: center center;
   border-radius: 50%;
-  margin: 20px;
-  position: relative;
-  left: 12px;
-  bottom: 10px;
+  transition: .5s ease-in-out;
 }
 
-nav {
-  font-size: 100%;
-  width: 300px;
-  position: relative;
-  left: 90px;
-  bottom: 96px;
+.logo:hover {
+  width: 200px;
+  height: 200px;
+  border-radius: 0;
 }
 
-nav ul {
-  //border: 1px dotted green;
+.nav-list {
+  padding-left: 24px;
 }
 
-nav ul li {
+.nav ul li {
   display: inline-block;
-  margin: 0 8px;
+  margin-right: 16px;
   cursor: pointer;
-  padding: 4px;
-  //border: 1px solid white;
 }
 
 nav ul li a {
-  color: white;
+  color: #fff;
   text-transform: lowercase;
-  font-size: 110%;
+  font-size: 1.275rem;
+  letter-spacing: .05em;
 }
 
-nav ul li a:hover {
-  text-decoration: none;
-  color: white;
+.nav ul li a:hover,
+.nav ul li a:focus {
+  color: #fff;
 }
 
-#title {
-  position: relative;
-  top: 66px;
-  color: white;
+.title {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
 }
 
-#title h1 {
-  font-size: 420%;
+.title h1 {
+  font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: .1em;
   font-weight: 400;
+  margin-bottom: 1rem;
 }
 
-#title h2 {
-  text-transform: lowercase;
+.title h2 {
   font-weight: 300;
+  margin-bottom: 2.5rem;
 }
 
-#header-icons {
-  font-size: 200%;
-  //border: 1px solid white;
-  width: 300px;
-  text-align: center;
-  position: absolute;
-  right: -20px;
-  top: 24px;
-}
-
-#header-icons a {
-  color: white;
-  margin-right: 20px;
-}
-
-#my-work {
+.my-work {
   display: block;
-  color: white;
-  border: 1px solid white;
+  color: #fff;
+  border: 1px solid #fff;
   text-align: center;
   width: 200px;
   padding: 10px;
   margin: auto;
-  position: relative;
-  top: 100px;
-  text-transform: lowercase;
-  border-radius: 4px;
+  text-transform: uppercase;
   transition: .5s ease all;
-  font-size: 120%;
+  font-size: 1.25rem;
+  letter-spacing: .1em;
 }
 
-#my-work:hover {
+.my-work:hover,
+.my-work:focus {
   text-decoration: none;
-  background: white;
-  color: black;
+  background: #fff;
+  color: #000;
 }
 
-#portfolio-banner {
-  height: 420px;
+.header-icons {
+  text-align: center;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+.header-icons a {
+  color: #fff;
+  margin-left: 32px;
+  font-size: 2.5rem;
+  transition: .2s ease-in-out;
+}
+
+.header-icons a:hover,
+.header-icons a:focus {
+  text-decoration: none;
+  color: #00d1d1;
+}
+
+.portfolio-banner {
   text-align: center;
   background-color: #eee;
   background: url('images/portfolio.jpeg');
   background-size: cover;
   background-position: center center;
-  color: white;
+  color: #fff;
+  padding: 40px 0;
+  position: relative;
 }
 
-#overlay-portfolio {
-  background: rgba(0, 102, 102, 0.6);
-  z-index: 500;
+.portfolio-banner:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 74, 74, 0.75);
   width: 100%;
   height: 100%;
-  padding: 20px;
 }
 
-#portfolio-banner h2 {
-  position: relative;
-  top: 80px;
+.portfolio-banner h2 {
+  margin-bottom: 40px;
 }
 
-#portfolio-banner p {
-  position: relative;
-  top: 120px;
-  font-size: 140%;
+.portfolio-banner p {
+  font-size: 1.5rem;
   font-family: 'PT Serif', serif;
   display: inline-block;
-  width: 70%;
+  max-width: 920px;
+  line-height: 36px;
+}
+
+.portfolio-banner h2,
+.portfolio-banner p {
+  position: relative;
+  z-index: 1;
+  color: #fff;
 }
 
 .portfolio {
-  height: 600px;
-  padding: 40px;
+  padding: 40px 0;
   text-align: center;
 }
 
@@ -164,8 +208,48 @@ nav ul li a:hover {
 
 .portfolio p {
   font-family: 'PT Serif', serif;
-  font-size: 130%;
+  font-size: 1.275rem;
   margin-bottom: 60px;
+}
+
+.portfolio a {
+  display: inline-block;
+  position: relative;
+}
+
+.portfolio__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: .1em;
+  opacity: 0;
+  transition: .2s ease-in-out;
+}
+
+.portfolio a:hover .portfolio__overlay {
+  opacity: 1;
+}
+
+
+.portfolio__overlay span {
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  padding: 8px 16px;
+  transition: .2s ease-in-out;
+  font-weight: bold;
+}
+
+.portfolio__overlay span:hover {
+  color: #000;
+  background: #fff;
 }
 
 .portfolio:nth-child(odd) {
@@ -173,34 +257,46 @@ nav ul li a:hover {
 }
 
 .portfolio img {
-  box-shadow: 2px 2px 10px grey;
+  box-shadow: 2px 2px 10px #808080;
+  width: 100%;
+  max-width: 620px;
 }
 
-#about-banner {
+.about-banner {
   text-align: center;
-  height: 420px;
   background: url('images/about.jpeg');
   background-size: cover;
   background-position: center center;
+  position: relative;
+  padding: 40px 0;
 }
 
-#about-banner p {
-  width: 80%;
+.about-banner:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 74, 74, .8);
+}
+
+.about-banner p {
+  max-width: 920px;
   display: block;
   margin: 40px auto;
   font-size: 130%;
   font-family: 'PT Serif', serif;
   letter-spacing: .1em;
+  line-height: 34px;
 }
 
-.overlay-two {
-  background: rgba(0, 102, 102, 0.6);
-  z-index: 500;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  padding-top: 60px;
-  color: white;
+.about-banner h2,
+.about-banner p {
+  position: relative;
+  z-index: 1;
+  color: #fff;
 }
 
 .heading {
@@ -208,45 +304,42 @@ nav ul li a:hover {
   letter-spacing: .1em;
   font-family: 'Lato', sans-serif;
   display: block;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid #d3d3d3;
   padding-bottom: 12px;
   width: 200px;
   margin: auto;
 }
 
-#contact {
-  height: 420px;
+.contact {
+  padding: 40px 0;
 }
 
-#contact h2 {
-  position: relative;
-  top: 80px;
+.contact h2 {
+  margin-bottom: 20px;
 }
 
 .contact-icons {
-  font-size: 180%;
+  font-size: 1.5rem;
   padding: 20px;
-  position: relative;
-  top: 140px;
   font-family: 'Lato', sans-serif;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   text-align: center;
 }
 
 .contact-group {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.contact-group i {
-  font-size: 200%;
+.contact-group .icon {
+  width: 40px;
+  height: 40px;
   margin-bottom: 20px;
 }
 
 footer {
   height: 420px;
   padding: 20px;
-  background-color: #333;
+  background-color: #222;
   position: relative;
 }
 
@@ -256,9 +349,16 @@ footer {
 }
 
 .footer-icons a {
-  font-size: 300%;
+  font-size: 200%;
   color: #bbb;
-  margin: 0 40px;
+  margin: 0 20px;
+  transition: .2s ease-in-out;
+}
+
+.footer-icons a:hover,
+.footer-icons a:focus {
+  text-decoration: none;
+  color: #00d1d1;
 }
 
 .footer-text {
@@ -267,17 +367,20 @@ footer {
   top: 100px;
 }
 
-.footer-text p {
-  position: relative;
-  top: 20px;
+.footer-text .heading {
+  padding-bottom: 24px;
 }
 
-#arrow {
+.footer-text p {
+  padding-top: 20px;
+}
+
+.arrow {
   display: none;
   position: fixed;
   bottom: 40px;
-  right: 40px;
-  font-size: 300%;
+  right: 24px;
+  font-size: 3rem;
 }
 
 .underline {
@@ -286,17 +389,20 @@ footer {
 }
 
 /**** Skills Section ****/
-#skills {
-  background-color: black;
-  color: white;
+.skills {
+  background-color: #000;
+  color: #fff;
   padding: 40px 0;
 }
 
 .skills-row {
   margin-top: 60px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill {
+  width: 100%;
 }
 
 .box {
@@ -304,17 +410,13 @@ footer {
   height: 60px;
   background-color: #244D4D;
   text-align: center;
-  color: white;
-  padding-top: 14px;
-  font-size: 120%;
-}
-
-.skill {
-  //margin: 40px 20px;
+  color: #fff;
+  padding-top: 16px;
+  font-size: 1.125rem;
 }
 
 .skill p {
-  font-size: 120%;
+  font-size: 1.125rem;
   position: relative;
   left: 70px;
   bottom: 46px;
@@ -356,67 +458,85 @@ footer {
   width: 70%;
 }
 
-@media(max-width: 500px) {
-  #logo, nav, #header-icons {
-    display: none;
+@media (min-width: 768px) {
+  .logo, .nav, .header-icons {
+    display: block;
   }
-  header {
-    height: 500px;
+
+  .header {
+    height: 700px;
   }
-  #title {
+
+  .title {
     top: 160px;
   }
-  #title h1 {
-    font-size: 300%;
+
+  .title h1 {
+    font-size: 3.75rem;
   }
-  #title h2 {
-    font-size: 160%;
+
+  .portfolio-banner p {
+    margin-bottom: 40px;
   }
-  #my-work {
-    top: 200px;
-  }
-  #portfolio-banner p {
-    width: 90%;
-  }
-  #overlay-portfolio {
-    padding: 0;
-  }
-  .portfolio img {
-    width: 100%;
-  }
-  #about-banner {
-    height: 600px;
-  }
-  #about-banner p {
-    width: 90%;
-  }
+
   .skills-row {
-    grid-template-columns: 1fr;
+    justify-content: space-between;
   }
-  #contact {
-    height: 660px;
+
+  .skill {
+    width: 48%;
   }
-  .contact-icons {
-    top: 100px;
-    grid-template-columns: 1fr;
-  }
-  .contact-group {
-    margin-bottom: 20px;
+
+  .footer-icons a {
+    font-size: 3rem;
+    margin: 0 40px;
   }
 }
 
-@media(max-width: 786px) {
-  #portfolio-banner p {
-    width: 90%;
+@media (min-width: 1025px) {
+  .title {
+    top: 240px;
   }
-  #about-banner p {
-    width: 90%;
+
+  .title h1 {
+    font-size: 4.25rem;
   }
-  #contact {
-    height: 620px;
+
+  .portfolio {
+    padding: 60px 0 80px 0;
   }
+
+  .portfolio-banner {
+    padding: 80px 0;
+  }
+
+  .about-banner {
+    padding: 80px 0;
+  }
+
+  .skills {
+    padding: 80px 0;
+  }
+
+  .skill {
+    width: 31.3333%;
+  }
+
+  .contact {
+    padding: 80px 0;
+  }
+
+  .contact h2 {
+    margin-bottom: 60px;
+  }
+
   .contact-icons {
-    top: 100px;
-    grid-template-columns: 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-group {
+    width: 33.3333%;
   }
 }

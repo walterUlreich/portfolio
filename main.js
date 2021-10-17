@@ -6,7 +6,6 @@ $(document).ready(function() {
 
    $(window).scroll(function(){
      scrollTop = $(window).scrollTop()
-      //console.log(scrollTop)
 
      if (scrollTop >= 60) {
        $("#arrow").show()
@@ -15,4 +14,5 @@ $(document).ready(function() {
      }
 
    })
+   
 })
