@@ -29,6 +29,32 @@ img {
   fill: currentColor;
 }
 
+.heading {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-family: 'Lato', sans-serif;
+  display: block;
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: 12px;
+  width: 200px;
+  margin: auto;
+}
+
+.arrow {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 24px;
+  font-size: 3rem;
+}
+
+.underline {
+  width: 100px;
+  margin-bottom: 30px;
+}
+
+
+/**** Header ****/
 .header {
   background: url('images/skyscraper.jpg');
   background-size: cover;
@@ -155,6 +181,7 @@ nav ul li a {
   color: #00d1d1;
 }
 
+/**** Portfolio Banner ****/
 .portfolio-banner {
   text-align: center;
   background-color: #eee;
@@ -262,6 +289,7 @@ nav ul li a {
   max-width: 620px;
 }
 
+/**** About Banner ****/
 .about-banner {
   text-align: center;
   background: url('images/about.jpeg');
@@ -297,95 +325,6 @@ nav ul li a {
   position: relative;
   z-index: 1;
   color: #fff;
-}
-
-.heading {
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  font-family: 'Lato', sans-serif;
-  display: block;
-  border-bottom: 1px solid #d3d3d3;
-  padding-bottom: 12px;
-  width: 200px;
-  margin: auto;
-}
-
-.contact {
-  padding: 40px 0;
-}
-
-.contact h2 {
-  margin-bottom: 20px;
-}
-
-.contact-icons {
-  font-size: 1.5rem;
-  padding: 20px;
-  font-family: 'Lato', sans-serif;
-  text-align: center;
-}
-
-.contact-group {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.contact-group .icon {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 20px;
-}
-
-footer {
-  height: 420px;
-  padding: 20px;
-  background-color: #222;
-  position: relative;
-}
-
-.footer-icons {
-  position: relative;
-  top: 60px;
-}
-
-.footer-icons a {
-  font-size: 200%;
-  color: #bbb;
-  margin: 0 20px;
-  transition: .2s ease-in-out;
-}
-
-.footer-icons a:hover,
-.footer-icons a:focus {
-  text-decoration: none;
-  color: #00d1d1;
-}
-
-.footer-text {
-  color: #bbb;
-  position: relative;
-  top: 100px;
-}
-
-.footer-text .heading {
-  padding-bottom: 24px;
-}
-
-.footer-text p {
-  padding-top: 20px;
-}
-
-.arrow {
-  display: none;
-  position: fixed;
-  bottom: 40px;
-  right: 24px;
-  font-size: 3rem;
-}
-
-.underline {
-  width: 100px;
-  margin-bottom: 30px;
 }
 
 /**** Skills Section ****/
@@ -458,6 +397,75 @@ footer {
   width: 70%;
 }
 
+/**** Contact Section ****/
+.contact {
+  padding: 40px 0;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+.contact-icons {
+  font-size: 1.5rem;
+  padding: 20px;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+.contact-group {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-group .icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+/**** Footer ****/
+.footer {
+  height: 420px;
+  padding: 20px;
+  background-color: #222;
+  position: relative;
+}
+
+.footer-icons {
+  position: relative;
+  top: 60px;
+}
+
+.footer-icons a {
+  font-size: 200%;
+  color: #bbb;
+  margin: 0 20px;
+  transition: .2s ease-in-out;
+}
+
+.footer-icons a:hover,
+.footer-icons a:focus {
+  text-decoration: none;
+  color: #00d1d1;
+}
+
+.footer-text {
+  color: #bbb;
+  position: relative;
+  top: 100px;
+}
+
+.footer-text .heading {
+  padding-bottom: 24px;
+}
+
+.footer-text p {
+  padding-top: 20px;
+}
+
+
+/**** Media Queries ****/
 @media (min-width: 768px) {
   .logo, .nav, .header-icons {
     display: block;
